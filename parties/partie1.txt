@@ -1,6 +1,6 @@
 3
 9
-Adrien
+Player_1
 688
 3
 1
@@ -10,7 +10,7 @@ Adrien
 0
 0
 0
-Hassane
+Player_2
 511
 5
 1
@@ -20,7 +20,7 @@ Hassane
 0
 0
 0
-Xuanyu
+Player_3
 976
 10
 1
