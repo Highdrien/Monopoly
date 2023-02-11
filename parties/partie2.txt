@@ -1,6 +1,6 @@
 2
 3
-Adrien
+Player_1
 1240
 20
 1
@@ -10,7 +10,7 @@ Adrien
 0
 0
 0
-Eric
+Player_2
 1260
 8
 1
