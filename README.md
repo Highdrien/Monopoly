@@ -1,8 +1,12 @@
 # Jeu du Monopoly
 
-**Voici le code d'un de mes projets pour un cours de Programation Object. Ce projet consiste à coder le Jeu du Monopoly en C++.**
+Voici le code d'un de mes projets pour un cours de Programation Object. Ce projet consiste à coder le Jeu du Monopoly en C++.
 
+- [Jeu du Monopoly](#jeu-du-monopoly)
 - [Lancement du jeu](#lancement-du-jeu)
+  - [Installation de g++](#installation-de-g)
+  - [Compilation](#compilation)
+  - [Exécution du jeu](#exécution-du-jeu)
 - [Descriptif de toutes les classes](#descriptif-de-toutes-les-classes)
   - [La classe `Jeu`](#la-classe-jeu)
   - [La classe `Joueur`](#la-classe-joueur)
@@ -22,13 +26,39 @@
 
 # Lancement du jeu
 
-Pour lancer le Monopoly, vous devez tout simplement exécuter&nbsp;: `main.cpp` ou alors le `Monopoly.exe`.
+Ce code a été développé sous Ubuntu (WSL) en utilisant `g++`. Je vous recommande de suivre la même méthode pour éviter les problèmes de compatibilité.
+
+## Installation de g++
+
+Pour installer le compilateur C++, exécutez les commandes suivantes dans votre terminal :
+
+```bash
+sudo apt update       # Met à jour la liste des paquets
+sudo apt install g++  # Installe g++
+g++ --version         # Vérifie que l'installation a réussi
+```
+
+## Compilation
+
+Pour créer l'exécutable `monopoly.exe`, utilisez la commande suivante :
+
+```bash
+g++ -Iinclude main.cpp src/*.cpp -o monopoly.exe
+```
+
+## Exécution du jeu
+
+Vous pouvez ensuite lancer le jeu avec la commande :
+
+```bash
+./monopoly.exe
+```
 
 # Descriptif de toutes les classes
 
 Vous trouverez ici les différentes classes présentes dans le Monopoly. Pour mieux comprendre ce schéma, il est préférable de lire les explications ci-dessous avec le diagramme UML associé.
 
-<p align="center"><img src=UML.png><p>
+<p align="center"><img src=asset/UML.png><p>
 
 ## La classe `Jeu` 
 C'est le cœur du programme. La classe Jeu sert à gérer le déroulement d'une partie de Monopoly. Elle permet de créer les joueurs, le plateau de jeu, les dés, etc. Cette classe contient également des méthodes pour gérer les tours de jeu, les actions des joueurs, les achats de propriétés, les paiements, etc... Elle permet de contrôler le déroulement du jeu et de mettre fin à la partie lorsqu'un joueur a gagné ou que les joueurs ont perdu. Elle se charge de sauvegarder les parties et de les restituer. Cette classe s’occupe des échanges de propriétés entre les joueurs et de la saisie des biens en cas de défaut de paiement.
@@ -75,9 +105,9 @@ Elle contient le tableau des cartes chance et caisse de communauté ainsi que le
 
 ## Les couleurs
 
-Si vous lancé le jeu dans le CMD de Windows 11, vous pouvez avoir un affichage en couleur comme-ci dessous. Cela permet une meilleur visibilité dans le jeu.
+Si vous lancé le jeu dans le powershell de Windows 11, vous pouvez avoir un affichage en couleur comme-ci dessous. Cela permet une meilleur visibilité dans le jeu.
 
-<p align="center"><img src=color_mode.png><p>
+<p align="center"><img src=asset/color_mode.png><p>
 
 Cependant, comme dit précédemment, cela marche seulement dans le CMD de Windows 11. C'est pourquoi il est demandé au début du jeu si on veut jouer ou non avec l'affichage des couleurs.
 
